@@ -1,3 +1,6 @@
+* {
+    outline: none;
+}
 .myheader {
     background: #5fc0cd;
     padding: 0.375rem 0;
@@ -50,6 +53,13 @@
     display: flex;
     justify-content: center;
 }
+.myselect>select {
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    text-align: center;
+}
 .mysecond a {
     display: inline-block;
     background: url('img/sprite_01.png') no-repeat 0 -28px;
@@ -98,6 +108,7 @@
 .mymiddleflex div p:nth-child(2) {
     margin-left: 1.8125rem;
     color: #484848;
+    margin-bottom: 0;
 }
 .mymiddleflex div p:nth-child(2) span{
     background: url('img/sprite_01.png') no-repeat -82px -26px;
@@ -109,13 +120,25 @@
     float: right;
     margin-right: 1rem;
 }
-.mymiddleflex div p:nth-child(2) i{
-    float: right;
+i {
     font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mymiddleflex div p:nth-child(2) i:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    padding-bottom:none;
+    width: 50%;
+}
+.mymiddleflex div p:nth-child(2) i:last-child{
+    float: right;
     position: relative;
     color: #ce593d;
 }
-
 .mymiddleflex div p:last-child span {
     display: inline-block;
 	background: url('img/sprite_01.png') no-repeat -81px -2px;
